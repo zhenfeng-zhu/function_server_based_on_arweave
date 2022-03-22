@@ -94,4 +94,6 @@ A word of caution: Free tier databases are not suitable for production and migra
 ❯ git push gigalixir
 ```
 
-需要有一个 elixir_buildpack.config
+4. 需要有一个 elixir_buildpack.config
+
+5. 移除eth_wallet
