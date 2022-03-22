@@ -83,4 +83,6 @@ A word of caution: Free tier databases are not suitable for production and migra
   "DATABASE_URL": "ecto://bb39a8f2-2dd0-4149-b54c-d33832627cfa-user:pw-fa87edae-2130-4b9b-b1ce-de9605bc1264@postgres-free-tier-v2020.gigalixir.com:5432/bb39a8f2-2dd0-4149-b54c-d33832627cfa",
   "POOL_SIZE": "2"
 }
+
+❯ git push gigalixir
 ```
