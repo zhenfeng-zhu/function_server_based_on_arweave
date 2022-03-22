@@ -1,0 +1,1 @@
+APP_NAME=faasex SECRET_KEY_BASE="$(mix phx.gen.secret)" MIX_ENV=prod DATABASE_URL="postgresql://postgres:postgres@localhost:5432/function_server_based_on_arweave_dev" PORT=4000 mix phx.server
