@@ -86,3 +86,5 @@ A word of caution: Free tier databases are not suitable for production and migra
 
 ❯ git push gigalixir
 ```
+
+需要有一个 elixir_buildpack.config
