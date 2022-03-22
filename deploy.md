@@ -1,3 +1,10 @@
+0.
+config.exs
+
+```elixir
+import_config "#{Mix.env()}.exs"
+```
+
 1. 
 
 prod.exs
