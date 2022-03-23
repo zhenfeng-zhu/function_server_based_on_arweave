@@ -100,6 +100,8 @@ A word of caution: Free tier databases are not suitable for production and migra
 
 gigalixir logs
 
+gigalixir run -- mix run priv/repo/seeds.exs
+
 ❯ curl https://faasex.gigalixirapp.com/
 ```
 
