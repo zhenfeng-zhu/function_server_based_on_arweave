@@ -1,0 +1,15 @@
+2022-03-23T02:07:20.716692+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | 02:07:20.715 request_id=71fb5ab9da551aec763634b719d97767 [info] GET /
+2022-03-23T02:07:20.718879+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | 02:07:20.718 request_id=71fb5ab9da551aec763634b719d97767 [info] Sent 500 in 2ms
+2022-03-23T02:07:20.719935+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | 02:07:20.718 [error] #PID<0.776.0> running FunctionServerBasedOnArweaveWeb.Endpoint (connection #PID<0.775.0>, stream id 1) terminated
+2022-03-23T02:07:20.720015+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | Server: faasex.gigalixirapp.com:80 (http)
+2022-03-23T02:07:20.720086+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | Request: GET /
+2022-03-23T02:07:20.720171+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  | ** (exit) an exception was raised:
+2022-03-23T02:07:20.720224+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |     ** (Enum.OutOfBoundsError) out of bounds error
+2022-03-23T02:07:20.720435+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (elixir 1.13.3) lib/enum.ex:1034: Enum.fetch!/2
+2022-03-23T02:07:20.720794+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (function_server_based_on_arweave 0.1.0) lib/function_server_based_on_arweave_web/live/code_loader_live/index.ex:19: FunctionServerBasedOnArweaveWeb.CodeLoaderLive.Index.mount/3
+2022-03-23T02:07:20.720860+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (phoenix_live_view 0.17.7) lib/phoenix_live_view/utils.ex:301: anonymous fn/6 in Phoenix.LiveView.Utils.maybe_call_live_view_mount!/5
+2022-03-23T02:07:20.722464+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (telemetry 1.0.0) /tmp/build/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+2022-03-23T02:07:20.722494+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (phoenix_live_view 0.17.7) lib/phoenix_live_view/static.ex:270: Phoenix.LiveView.Static.call_mount_and_handle_params!/5
+2022-03-23T02:07:20.722497+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (phoenix_live_view 0.17.7) lib/phoenix_live_view/static.ex:110: Phoenix.LiveView.Static.render/3
+2022-03-23T02:07:20.722531+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (phoenix_live_view 0.17.7) lib/phoenix_live_view/controller.ex:39: Phoenix.LiveView.Controller.live_render/3
+2022-03-23T02:07:20.722715+00:00 faasex[b'faasex-6ccf8d6b95-pkrsd']: web.1  |         (phoenix 1.6.6) lib/phoenix/router.ex:355: Phoenix.Router.__call__/2

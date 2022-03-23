@@ -92,6 +92,15 @@ A word of caution: Free tier databases are not suitable for production and migra
 }
 
 ❯ git push gigalixir
+
+# 或者
+❯ git -c http.extraheader="GIGALIXIR-CLEAN: true" push gigalixir
+
+❯ gigalixir run mix ecto.migrate
+
+gigalixir logs
+
+❯ curl https://faasex.gigalixirapp.com/
 ```
 
 4. 需要有一个 elixir_buildpack.config
