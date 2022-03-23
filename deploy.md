@@ -115,3 +115,15 @@ gigalixir run -- mix run priv/repo/seeds.exs
     "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
   }
 }
+
+搞一个node_modules文件夹，要在assets下面。
+
+7. 搞一个phoenix_static_buildpack.config文件
+```
+node_version=12.16.3
+clean_cache=false
+phoenix_relative_path=.
+remove_node=false
+assets_path=.
+phoenix_ex=phoenix
+```
