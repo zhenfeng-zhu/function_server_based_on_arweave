@@ -108,3 +108,10 @@ gigalixir run -- mix run priv/repo/seeds.exs
 4. 需要有一个 elixir_buildpack.config
 
 5. 移除eth_wallet
+
+6. 添加package.json
+{
+  "scripts": {
+    "deploy": "cd .. && mix assets.deploy && rm -f _build/esbuild"
+  }
+}
