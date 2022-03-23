@@ -52,27 +52,20 @@ config :logger, level: :info
 
 config :function_server_based_on_arweave, FunctionServerBasedOnArweaveWeb.Endpoint,
   # Possibly not needed, but doesn't hurt
+  load_from_system_env: true,
   http: [port: {:system, "PORT"}],
-  url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443],
-  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
   server: true,
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
+  url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443],
   check_origin: false,
-  code_reloader: true,
-  watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
-  ]
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  version: Mix.Project.config[:version] # to bust cache during hot upgrades
+
 
 # Watch static and templates for browser reloading.
 config :function_server_based_on_arweave, FunctionServerBasedOnArweaveWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/function_server_based_on_arweave_web/(live|views)/.*(ex)$",
-      ~r"lib/function_server_based_on_arweave_web/templates/.*(eex)$"
-    ]
-  ]
+  url: [host: "example.com", port: 80],
+  cache_static_manifest: "priv/static/cache_manifest.json"
 
 config :function_server_based_on_arweave, FunctionServerBasedOnArweave.Repo,
   adapter: Ecto.Adapters.Postgres,
